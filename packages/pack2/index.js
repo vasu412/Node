@@ -2,12 +2,20 @@ function sumOfArray(arr) {
   return arr.reduce((acc, curr) => acc + curr, 0);
 }
 
+function multiplicationOfArray(arr) {
+  return arr.reduce((acc, curr) => acc * curr, 1);
+}
+
 function evenArray(arr) {
-  return arr.filter((x) => x / 2 === 0 && x);
+  return arr.filter((x) => {
+    if (x % 2 === 0) return x;
+  });
 }
 
 function oddArray(arr) {
-  return arr.filter((x) => x / 2 !== 0 && x);
+  return arr.filter((x) => {
+    if (x % 2 !== 0) return x;
+  });
 }
 
 function sortedArray(arr) {
@@ -29,10 +37,19 @@ function isOdd(num) {
 
 function factorial(num) {
   var fac = 1;
-  while (num-- > 0) {
+  while (num > 0) {
     fac *= num;
+    num--;
   }
   return fac;
+}
+
+function findMax() {
+  return Math.max(...arguments);
+}
+
+function findMin() {
+  return Math.min(...arguments);
 }
 
 module.exports = {
@@ -43,4 +60,7 @@ module.exports = {
   isPrime,
   isOdd,
   factorial,
+  multiplicationOfArray,
+  findMax,
+  findMin,
 };
