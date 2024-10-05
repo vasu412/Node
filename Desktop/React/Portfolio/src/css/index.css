@@ -1,0 +1,331 @@
+/* Basic styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Afacad Flux", sans-serif;
+  color: #fff;
+  /* background-color: #130d0a; */
+  background-color: rgb(25,25,25);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 2s ease;
+}
+
+.header {
+  height: 220px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background-color: #130d0a;
+  transition: all 1s ease-in-out;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video background styling */
+#heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6); /* Lower brightness */
+}
+
+/* Hero text styling */
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-text {
+  opacity: 0;
+}
+
+.title {
+  font-size: 130px;
+  font-family: "Afacad Flux", sans-serif;
+  letter-spacing: 12px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-family: "Afacad Flux", sans-serif;
+  font-weight: 200;
+  letter-spacing: 7px;
+  margin-bottom: 50px;
+}
+
+.material-icons {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.menu {
+  position: fixed;
+  right: 105px;
+  top: 35px;
+  font-size: 40px;
+  z-index: 999;
+}
+
+/* Section styling */
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(1);
+}
+
+.header-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.other-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+    height: 42px;
+    width: 42px;
+    border-radius: 100%;
+    border: 1px solid white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+#skills{
+ background-image: url("https://images.unsplash.com/photo-1606594914767-d6bfbde9a0e9?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+#projects{
+background-image: url("https://images.unsplash.com/photo-1612058633399-49246186dbe0?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+#socials{
+  background-image: url("https://images.pexels.com/photos/7634159/pexels-photo-7634159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  min-height: 100vh;
+  height: auto;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: repeat(3, 300px);
+  grid-template-areas:
+    "github linkedin"
+    "github instagram"
+    "slack instagram";
+  gap: 40px;
+  cursor: pointer;
+}
+
+.boxes div{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.github {
+  grid-area: github;
+  background-image: url("https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.linkedin {
+  grid-area: linkedin;
+  background-image: url("https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.slack {
+  grid-area: slack;
+  background-image: url("https://images.unsplash.com/photo-1496200186974-4293800e2c20?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2xhY2t8ZW58MHx8MHx8fDA%3D");
+}
+
+.instagram {
+  grid-area: instagram;
+  background-image: url("https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.box span{
+  position: absolute;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  bottom: 10px;
+  opacity: 0;
+  z-index: 99;
+}
+
+.box:hover{
+  /* filter: brightness(0.8);
+  transition: all 0.4s ease; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.box:hover  span{
+ opacity: 1;
+ filter: brightness(1);
+ transition: all 0.7s ease;
+}
+
+.subSections{
+  display: flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 35px 0;
+}
+
+.projectBoxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+}
+
+.projectBoxes div{
+  height: 500px;
+  width: 500px;
+  border: 2px solid white;
+}
+
+.skillBoxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  grid-template-areas: 
+    "java git html css"
+    "tailwind js react node";
+  padding: 20px;
+}
+
+.java {
+  grid-area: java;
+  background-color: #f7df1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.git {
+  grid-area: git;
+  background-color: #f1502f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.html {
+  grid-area: html;
+  background-color: #e34c26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.css {
+  grid-area: css;
+  background-color: #264de4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tailwind {
+  grid-area: tailwind;
+  background-color: #38b2ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.js {
+  grid-area: js;
+  background-color: #f0db4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react {
+  grid-area: react;
+  background-color: #61dafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.node {
+  grid-area: node;
+  background-color: #68a063;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillBoxes div {
+  height: 100px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
